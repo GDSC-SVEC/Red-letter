@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<style type="text/css">
+    a {
+        color: #fff;
+    }
+
+    .hero {
+        height: 100vh;
+        background: url('/campuslife-hero.jpg');
+        background-size: cover;
+        position: -webkit-sticky;
+
+    }
+
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 100%;
+    }
+
+    footer p {
+        font-size: 18px;
+    }
+
+    .address {
+        font-size: 16px;
+        padding-left: 7px;
+    }
+
+    .logo {
+        height: 80px;
+        width: fit-content;
+    }
+
+    footer h5 {
+        margin-top: 20px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-danger fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-brand d-flex" style="gap: 10px; align-items: center; color: #fff;">
+                <img src="/Templates/SVEC logo.png" alt="" width="50px" height="50px" />
+                <div>
+                    <div>Sri Vasavi Engineering College</div>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" style="flex-grow: 0;" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" style="color: #fff;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: #fff;">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: #fff;">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="color: #fff;">
+                            Dropdown link
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="hero-overlay">
+            <h1 style="color: #fff; font-size: 55px; text-align: center;">Campus Life</h1>
+        </div>
+    </div>
+    <section>
+        <div></div>
+    </section>
+    <div class="container d-flex"
+        style="justify-content: space-around; align-items: center; height: 100vh; flex-direction: row; flex-wrap: wrap;">
+        <div class="text-container" style="font-size: 25px;">
+            <p style="font-stretch: expanded;font-size: 90px;font-stretch: expanded;background: url(/campuslife-hero.jpg);background-size: cover; background-position: center; /* Adjust as needed */
+            background-repeat: no-repeat; /* Adjust as needed */
+            display: inline-block; font-weight: bolder;-webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;">Connect
+                <br>Collaborate
+                <br>Create
+            </p>
+        </div>
+        <img class="profile-img " src="/2.avif" style="border-radius: 5px; box-shadow: 0px 0px;">
+    </div>
+    <div class="container counter-section">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="counter">
+                    <h3>Happy Customers</h3>
+                    <p>We're proud of our accomplishments.</p>
+                    <div class="count" data-count="1000">0</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="counter">
+                    <h3>Projects Completed</h3>
+                    <p>We're proud of our accomplishments.</p>
+                    <div class="count" data-count="500">0</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="counter">
+                    <h3>Customer Satisfaction</h3>
+                    <p>We're proud of our accomplishments.</p>
+                    <div class="count" data-count="99">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container">
+    <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+          Toggle width collapse
+        </button>
+      </p>
+      <div style="min-height: 120px;">
+        <div class="collapse collapse-horizontal" id="collapseWidthExample">
+          <div class="card card-body" style="width: 300px;">
+            This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+          </div>
+        </div>
+      </div>
+    <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+          Toggle width collapse
+        </button>
+      </p>
+      <div style="min-height: 120px;">
+        <div class="collapse collapse-horizontal" id="collapseWidthExample">
+          <div class="card card-body" style="width: 300px;">
+            This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-3 ">
+                    <img class="logo" src="vasavisvec_logo-removebg.png" alt="">
+                    <p style="font-size: 16px;opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nemo at,
+                        accusamus
+                        dolores quas praesentium
+                        voluptatum odio quo dolorem, commodi possimus maxime voluptatibus eius atque placeat optio
+                        reprehenderit
+                        nihil. Asperiores, delectus.</p>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled quicklinks">
+                        <li><a href="#">Photo Gallery</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">Hostels</a></li>
+                        <li><a href="#">Sports <br>Facililties</a></li>
+                        <li><a href="#">Transport</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h5>Useful Links</h5>
+                    <ul class="list-unstyled quicklinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h5>Connect with Us</h5>
+                    <ul class="list-unstyled social-icons">
+                        <li><a href="#"><i class="fab fa-facebook" style="font-size: 24px;"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter" style="font-size: 24px;"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram" style="font-size: 24px;"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin" style="font-size: 24px;"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube" style="font-size: 24px;"></i></a></li>
+                    </ul>
+
+                    <h5>Contact Us</h5>
+
+                    <p class="address">
+                        Sri Vasavi Engineering College <br> Pedatadepalli,Tadepalligudem <br>534 101 West Godavari
+                        Dist., <br>Andhra
+                        Pradesh.
+
+                        <span class="phone">+91-8818284322 (9:30 AM-4:30 PM)</span>
+                        <span class="phone">principal@srivasaviengg.ac.in
+                        </span>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center;opacity: 0.7;">Powered by <a href="#"
+                style="font-weight: 700;margin-right:5px;margin-left:5px;">
+                <span style="color:#4285F4 ;">G</span>
+                <span style="color:#34A853 ;">D</span>
+                <span style="color:#FBBC05 ;">S</span>
+                <span style="color: #EA4335; margin-right:5px;">C </span>Web Devs</a></p>
+        <p style="text-align: center;opacity: 0.7;">Copyright © 2023 Sri Vasavi Engineering College. All Rights
+            Reserved.
+        </p>
+    </footer>
+
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/b2b9ab5ba1.js" crossorigin="anonymous"></script>

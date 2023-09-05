@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+    /* Your existing CSS styles here */
+
+    .counter-section {
+        background-color: #f8f9fa;
+        padding: 100px 0;
+    }
+
+    .counter {
+        text-align: center;
+    }
+
+    .counter h3 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .counter p {
+        font-size: 18px;
+    }
+
+    .counter .count {
+        font-size: 48px;
+        font-weight: bold;
+        color: #007bff;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <!-- Your existing navigation and hero section here -->
+
+    <!-- Counter Section -->
+    <div class="container counter-section">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="counter">
+                    <h3>Happy Customers</h3>
+                    <p>We're proud of our accomplishments.</p>
+                    <div class="count" data-count="1000">0</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="counter">
+                    <h3>Projects Completed</h3>
+                    <p>We're proud of our accomplishments.</p>
+                    <div class="count" data-count="500">0</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="counter">
+                    <h3>Customer Satisfaction</h3>
+                    <p>We're proud of our accomplishments.</p>
+                    <div class="count" data-count="99">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your footer and other sections here -->
+
+</body>
+</html>
+<script>
+    $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    var counterOffset = $(".counter").offset().top;
+    var windowHeight = $(window).height();
+
+    if (scrollTop > counterOffset - windowHeight + 200) {
+        $(".count").each(function () {
+            var $this = $(this);
+            var countTo = $this.attr("data-count");
+            $({ countNum: $this.text() }).animate(
+                {
+                    countNum: countTo,
+                },
+                {
+                    duration: 2000,
+                    easing: "linear",
+                    step: function () {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function () {
+                        $this.text(this.countNum);
+                    },
+                }
+            );
+            $this.addClass("count-up");
+        });
+    }
+});
+</script>
